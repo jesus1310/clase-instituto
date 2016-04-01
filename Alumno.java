@@ -11,6 +11,7 @@ public class Alumno
     private int numeroInicial = 1;
     private int numeroLista;
     private ArrayListInt notas;
+    private static final int NOTA_APROBADO = 5;
 
     /**
      * Constructor for objects of class Alumno
@@ -40,5 +41,12 @@ public class Alumno
             totalSuma += notas.get(i);
         }
         return totalSuma/notas.size();
+    }
+    
+    /**
+     * Método para mostrar si ha aprobado o no
+     */
+    public boolean aprobado(){
+        return notaMedia()>=NOTA_APROBADO;
     }
 }
