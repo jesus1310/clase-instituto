@@ -22,5 +22,12 @@ public class Alumno
         numeroLista = numeroInicial;
         numeroInicial++;
         notas = new ArrayListInt();
-    }    
+    }
+    
+    /**
+     * Método para añadir notas al alumno
+     */
+    public void addNota(int nota){
+        notas.add(nota);
+    }
 }
