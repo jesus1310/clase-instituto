@@ -11,7 +11,7 @@ public class Alumno
     private int numeroInicial = 1;
     private int numeroLista;
     private ArrayListInt notas;
-    
+
     /**
      * Constructor for objects of class Alumno
      */
@@ -23,11 +23,22 @@ public class Alumno
         numeroInicial++;
         notas = new ArrayListInt();
     }
-    
+
     /**
      * Método para añadir notas al alumno
      */
     public void addNota(int nota){
         notas.add(nota);
+    }
+
+    /**
+     * Método para calcular la nota media
+     */
+    public float notaMedia(){
+        int totalSuma = 0;
+        for (int i = 0; i < notas.size(); i++){
+            totalSuma += notas.get(i);
+        }
+        return totalSuma/notas.size();
     }
 }
