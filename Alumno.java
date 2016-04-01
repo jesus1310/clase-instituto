@@ -49,4 +49,11 @@ public class Alumno
     public boolean aprobado(){
         return notaMedia()>=NOTA_APROBADO;
     }
+    
+    /**
+     * Método que muestra los datos del alumno
+     */
+    public String muestraDatos(){
+        return "Nombre: " + nombre + "/nEdad: " + edad + "/nMedia: " + notaMedia() + "/n¿Ha aprobado? " + aprobado();
+    }
 }
