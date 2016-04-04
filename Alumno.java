@@ -40,20 +40,20 @@ public class Alumno
         for (int i = 0; i < notas.size(); i++){
             totalSuma += notas.get(i);
         }
-        return totalSuma/notas.size();
+        return (totalSuma/(float)notas.size());
     }
-    
+
     /**
      * Método para mostrar si ha aprobado o no
      */
     public boolean aprobado(){
-        return notaMedia()>=NOTA_APROBADO;
+        return notaMedia() >= NOTA_APROBADO;
     }
-    
+
     /**
      * Método que muestra los datos del alumno
      */
-    public String muestraDatos(){
-        return "Nombre: " + nombre + "/nEdad: " + edad + "/nMedia: " + notaMedia() + "/n¿Ha aprobado? " + aprobado();
+    public void muestraDatos(){
+        System.out.println("Nombre: " + nombre + "\nEdad: " + edad + "\nMedia: " + notaMedia() + "\n¿Aprobado? " + aprobado() + "\n");
     }
 }
