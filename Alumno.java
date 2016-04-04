@@ -8,7 +8,7 @@ public class Alumno
 {
     private String nombre;
     private int edad;
-    private int numeroInicial = 1;
+    private static int numeroInicial = 1;
     private int numeroLista;
     private ArrayListInt notas;
     private static final int NOTA_APROBADO = 5;
@@ -54,6 +54,10 @@ public class Alumno
      * Método que muestra los datos del alumno
      */
     public void muestraDatos(){
-        System.out.println("Nombre: " + nombre + "\nEdad: " + edad + "\nMedia: " + notaMedia() + "\n¿Aprobado? " + aprobado() + "\n");
+        System.out.println("Numero en lista: " + numeroLista + "\nNombre: " + nombre + "\nEdad: " + edad + "\nListado de notas: ");
+        for(int i = 0; i < notas.size(); i++){
+            System.out.println(notas.get(i));
+        }
+        System.out.println("Media: " + notaMedia() + "\n¿Aprobado? " + aprobado() + "\n");
     }
 }
